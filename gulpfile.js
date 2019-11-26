@@ -33,6 +33,10 @@ gulp.task('browser-sync', function () {
     });
 });
 
+// gulp.task('clean', async function(){
+//     del.sync('dist')
+//   })
+
 gulp.task('bower', function () {
     return gulp.src('src/index.html')
         .pipe(wiredep({
