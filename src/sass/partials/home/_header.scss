@@ -50,7 +50,6 @@
 
 .slider-arrows {
     position: absolute;
-    // left: 80px; 
     top: 40px;
     right: 80px;
     cursor: pointer;
@@ -111,6 +110,19 @@
     z-index: 4;
 }
 
+.header__arrows {
+    position: absolute;
+    bottom: 4.01%;
+    left: 14.51%;
+    z-index: 3;
+}
+
+.header__map {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 3;
+}
 
 .header__aside {
     position: absolute;
