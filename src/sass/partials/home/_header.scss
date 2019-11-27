@@ -97,18 +97,6 @@
     }
 }
 
-
-
-.header__aside {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 5;
-    border-right: 1px solid rgba(#fff, .25);
-    height: 100vh;
-    text-align: center;
-    color: #fff;
-}
 .header__title {
     font-weight: 800;
     font-size: 200px;
@@ -121,37 +109,79 @@
     top: 0;
     left: 0;
     z-index: 4;
-} 
-
-.menu {
-    a {
-        color: #fff;
-
-        span {
-            display: block;
-            color: #fff;
-            font-weight: 500;
-            font-size: 12px;
-            line-height: 14px;
-            letter-spacing: 3px;
-            padding-top: 6px;
-            margin-bottom: 37px;
-        }
-    }
 }
 
-.header__date {
-    font-size: 72px;
-    line-height: 64px;
-    font-weight: 800;
-    span {
-        padding-top: 15px;
+
+.header__aside {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    border-right: 1px solid rgba(#fff, .25);
+    height: 100vh;
+    text-align: center;
+    color: #fff;
+
+    .menu {
+        padding-top: 30px;
+
+        a {
+            color: #fff;
+
+            span {
+                display: block;
+                color: #fff;
+                font-weight: 500;
+                font-size: 12px;
+                line-height: 14px;
+                letter-spacing: 3px;
+                padding-top: 6px;
+                margin-bottom: 20px;
+            }
+        }
+    }
+
+    .header__date {
+        font-size: 72px;
+        line-height: 64px;
+        font-weight: 800;
+
+        span {
+            padding-top: 15px;
+            font-weight: 300;
+            font-size: 16px;
+            line-height: 19px;
+            letter-spacing: 1.4px;
+            color: #FFFFFF;
+            margin-bottom: 20px;
+            display: block;
+        }
+    }
+
+    .header__search {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .header__location {
+        display: inline-block;
         font-weight: 300;
-        font-size: 16px;
-        line-height: 19px;
-        letter-spacing: 1.4px;
+        font-size: 12px;
+        line-height: 14px;
+        letter-spacing: 1.05px;
         color: #FFFFFF;
-        margin-bottom: 30px;
-        display: block;
+        position: relative;
+        padding-left: 19px;
+
+        &::before {
+            content: "";
+            position: absolute;
+            width: 11px;
+            height: 13px;
+            background-image: url("../img/location.svg");
+            color: black;
+            left: 0;
+            top: 0;
+        }
     }
 }
