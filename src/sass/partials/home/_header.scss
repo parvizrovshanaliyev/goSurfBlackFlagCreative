@@ -122,6 +122,20 @@
     right: 0;
     top: -5%;
     z-index: 3;
+
+}
+
+.line-animation {
+    stroke-dashoffset: 600;
+    stroke-dasharray: 600;
+    // animation-duration: 1s;
+    animation: animdash 4s infinite 6s;
+}
+
+@keyframes animdash {
+    to {
+        stroke-dashoffset: 0;
+    }
 }
 
 .header__aside {
@@ -181,7 +195,7 @@
 
     .header__search {
         padding-top: 0.0625rem;
-    padding-bottom: 0.875rem;
+        padding-bottom: 0.875rem;
     }
 
     .header__location {
