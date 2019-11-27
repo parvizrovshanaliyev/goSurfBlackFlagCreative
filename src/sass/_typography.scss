@@ -9,6 +9,8 @@ body {
     font-family: $font-family;
     font-weight: 400;
     font-size: 16px;
+    background: #171919;
+    color: #fff;
 }
 
 ul,
@@ -23,7 +25,7 @@ li{
     line-height: 23px;
     letter-spacing: 7.33333px;
     text-transform: uppercase;
-    color: #FFFFFF;
+    // color: #FFFFFF;
     opacity: 0.5;
     padding-left: 103px;
     position: relative;
@@ -44,6 +46,7 @@ a {
     text-decoration: none;
     display: inline-block;
     outline: none;
+    color: #fff;
 }
 
 select,
