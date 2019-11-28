@@ -1,5 +1,5 @@
 const gulp = require('gulp');
-const browserSync = require('browser-sync').create();
+const browserSync = require('browser-sync');
 const sass = require('gulp-sass');
 const minifyCSS = require('gulp-csso');
 const minifyImg = require('gulp-imagemin');
@@ -23,6 +23,10 @@ const uglify = require('gulp-uglify');
 const pipeline = require('readable-stream').pipeline;
 const imagemin = require('gulp-imagemin');
 
+
+gulp.task('clean', async function(){
+    del.sync('dist')
+  });
 // Static server
 gulp.task('browser-sync', function () {
     browserSync.init({
@@ -74,7 +78,7 @@ gulp.task('css', () => {
         .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest(cnf.dist.css))
 
-        .pipe(browserSync.stream());
+        .pipe(browserSync.reload({stream: true}));
 });
 
 
@@ -99,7 +103,7 @@ gulp.task('js', () => {
         .pipe(uglify())
         .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest(cnf.dist.js))
-        .pipe(browserSync.stream());
+        .pipe(browserSync.reload({stream: true}));
 });
 
 gulp.task("html", () => {
@@ -185,7 +189,7 @@ gulp.task('lib', () => {
         }))
         .pipe(gulp.dest('dist/lib/js'))
 
-        .pipe(browserSync.stream());
+        .pipe(browserSync.reload({stream: true}));
 });
 
 gulp.task('fonts', () => {
@@ -193,7 +197,7 @@ gulp.task('fonts', () => {
         .pipe(gulp.dest(cnf.dist.fonts))
 });
 
-gulp.task('delete', () => del(['dist/css','lib', 'dist/js', 'dist/**/*.html']));
+// gulp.task('delete', () => del(['dist/css','lib', 'dist/js', 'dist/**/*.html']));
 
 gulp.task('watch', () => {
     gulp.watch("src/sass/**/*.scss", ['css']);
@@ -207,7 +211,7 @@ gulp.task('watch', () => {
 
 gulp.task('default', () => {
     runSequence(
-        'delete',
+        'clean',
         'fonts',
         'html',
         'css',
