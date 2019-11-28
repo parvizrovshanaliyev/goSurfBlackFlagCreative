@@ -108,3 +108,14 @@
         }
     }
 }
+
+// slider map
+.slider-map{
+    max-width: 1200px;
+    min-height: 635px;
+    background-image: url("../img/worldMapDots.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    margin: 0 auto;
+}

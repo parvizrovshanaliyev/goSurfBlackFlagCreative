@@ -13,6 +13,7 @@ $(function () {
         asNavFor: '.header__slider',
     });
     $('.surf-slider').slick({
+        asNavFor: '.slider-map',
         // autoplay: true,
         // autoplaySpeed: 2000,
         slidesToShow:4,
@@ -46,4 +47,12 @@ $(function () {
 
         // ]
     });
+    $('.slider-map').slick({
+        slidesToShow:8,
+        slidesToScroll: 1,
+        arrows: false,
+        asNavFor: '.surf-slider',
+        focusOnSelect: true,
+    });
+
 });
