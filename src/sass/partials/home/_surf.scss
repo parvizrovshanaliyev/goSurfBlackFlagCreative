@@ -20,7 +20,7 @@
     background-size: cover;
 
     &__inner {
-        min-height: 750px;
+        min-height: 650px;
         background: rgba($color: #1C2121, $alpha: .85);
         position: relative;
         transition: all .4s ease-in;
@@ -84,7 +84,14 @@
         .surf-box {
             margin-top: 89px;
         }
+        
+
     }
+    // .slick-slide{
+    //     .surf-box:not(:first-child) {
+    //         margin-left: -50px;
+    //     }
+    // }
 
     .slick-current {
         .surf-box__inner {
