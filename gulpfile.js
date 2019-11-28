@@ -99,7 +99,6 @@ gulp.task('js', () => {
         .pipe(uglify())
         .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest(cnf.dist.js))
-
         .pipe(browserSync.stream());
 });
 
